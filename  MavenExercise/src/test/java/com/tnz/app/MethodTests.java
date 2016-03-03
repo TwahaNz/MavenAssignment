@@ -19,22 +19,23 @@ public class MethodTests extends TestCase {
 
     public void testFloat()
     {
-        Assert.assertEquals(3.0f, math.getFloat(), 0);
+        Assert.assertEquals(10.0f, math.getFloat(), 0);
     }
 
     public void testInt()
     {
-        Assert.assertNotEquals(10, math.getInt());
+        Assert.assertNotEquals(2, math.getInt());
     }
 
     public void testObjectEq()
     {
-        Assert.assertSame(new Maths(), math);
+        Assert.assertTrue(math.equals(math));
     }
 
     public void testObjectId()
     {
-
+        Maths m = new Maths();
+        Assert.assertFalse(m == math);
     }
 
     public void testTruth()
@@ -49,12 +50,13 @@ public class MethodTests extends TestCase {
 
     public void testNullness()
     {
-        Assert.assertNull(new Maths());
+        Maths m = null;
+        Assert.assertNull(m);
     }
 
     public void testFailing()
     {
-        Assert.assert
+
     }
 
 }
