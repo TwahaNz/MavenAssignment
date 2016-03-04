@@ -8,11 +8,11 @@ import org.junit.Test;
  * Created by Twaha Nzeyimana on 2016/03/01.
  */
 
-public class MethodTests{
+public class MethodTest {
 
     private Maths math;
 
-    public MethodTests()
+    public MethodTest()
     {
         math = new Maths();
     }
