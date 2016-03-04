@@ -2,7 +2,12 @@ package com.tnz.app;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.rules.Timeout;
+
+import java.sql.Time;
+import java.util.concurrent.TimeoutException;
 
 /**
  * Created by student on 2016/03/01.
@@ -59,4 +64,27 @@ public class MethodTests extends TestCase {
 
     }
 
+    public void testException()
+    {
+        boolean exception = false;
+
+        try {
+            math.getException();
+        }
+        catch (IndexOutOfBoundsException ex)
+        {
+            exception = true;
+        }
+
+        Assert.assertTrue(exception);
+    }
+
+    public void testTimeout() {
+
+        boolean exception = false;
+
+        math.getTimeout();
+
+        Assert.assertTrue(exception);
+    }
 }
